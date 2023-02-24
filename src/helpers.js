@@ -121,9 +121,9 @@ const inRange = (affected, x, y) => {
     let n = affected.length;
     const candidates = [];
     const stage = getApplication().stage;
-    const dpr = stage.getOption('devicePixelRatio');
+    const dpr = stage.getOption('devicePixelRatio') || 1;
     const precision = stage.getRenderPrecision();
-    
+
     // loop through affected children
     // and perform collision detection
     while (n--) {
